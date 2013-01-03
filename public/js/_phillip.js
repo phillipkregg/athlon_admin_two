@@ -30,7 +30,21 @@ $(document).ready(function() {
 
         $target.slideToggle('fast');
 
+
     });
+
+
+    //*** subnav ***
+    $subnav = $('.box-content:first ul li');
+
+    $($subnav).bind('click', function() {
+
+        $(this).addClass('active-sub-nav');
+        $(this).siblings().removeClass('active-sub-nav');
+
+
+    });
+
 
 
 });
