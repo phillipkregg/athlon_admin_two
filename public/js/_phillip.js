@@ -22,10 +22,10 @@ $(document).ready(function() {
 
         if($target.is(':visible')) {
             $($($icon)).removeClass('icon-chevron-down').addClass('icon-chevron-right');
-            $(this).removeClass('left-nav-border');
+            //$(this).removeClass('left-nav-border');
         } else {
             $($($icon)).removeClass('icon-chevron-right').addClass('icon-chevron-down');
-            $(this).addClass('left-nav-border');
+            //$(this).addClass('left-nav-border');
         }
 
         $target.slideToggle('fast');
