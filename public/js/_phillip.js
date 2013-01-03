@@ -4,19 +4,30 @@ $(document).ready(function() {
 
     //**** Close all nav boxes except for top level
     var $boxes = $('.main-menu-span .box .box-content');
+    var $icons = $('.main-menu-span .box .box-icon i');
+
 
     $boxes.not(':first').hide();
+    console.log($boxes.find(':first'));
 
-    console.log($boxes);
+
 
     //**** Make nav boxes clickable by title and change arrow depending on open or close status
-    $('.btn-header-minimize').click(function(e){
+    $('.btn-header-minimize').parent().parent().click(function(e){
         e.preventDefault();
-        var $target = $(this).parent().parent().next('.box-content');
-        var $icon = $(this).parent().parent().find('.box-icon i');
+        var $target = $(this).next('.box-content');
+        var $icon = $(this).find('.box-icon i');
 
-        if($target.is(':visible')) $($($icon)).removeClass('icon-chevron-up').addClass('icon-chevron-down');
-        else 					   $($($icon)).removeClass('icon-chevron-down').addClass('icon-chevron-up');
+
+
+        if($target.is(':visible')) {
+            $($($icon)).removeClass('icon-chevron-down').addClass('icon-chevron-right');
+            $(this).removeClass('left-nav-border');
+        } else {
+            $($($icon)).removeClass('icon-chevron-right').addClass('icon-chevron-down');
+            $(this).addClass('left-nav-border');
+        }
+
         $target.slideToggle('fast');
 
     });

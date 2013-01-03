@@ -235,13 +235,13 @@ function template_functions(){
 		e.preventDefault();
 		$(this).parent().parent().parent().fadeOut();
 	});
-	$('.btn-minimize').click(function(e){
-		e.preventDefault();
-		var $target = $(this).parent().parent().next('.box-content');
-		if($target.is(':visible')) $('i',$(this)).removeClass('icon-chevron-up').addClass('icon-chevron-down');
-		else 					   $('i',$(this)).removeClass('icon-chevron-down').addClass('icon-chevron-up');
-		$target.slideToggle('fast');
-	});
+//	$('.btn-minimize').click(function(e){
+//		e.preventDefault();
+//		var $target = $(this).parent().parent().next('.box-content');
+//		if($target.is(':visible')) $('i',$(this)).removeClass('icon-chevron-down').addClass('icon-chevron-right');
+//		else 					   $('i',$(this)).removeClass('icon-chevron-right').addClass('icon-chevron-down');
+//		$target.slideToggle('fast');
+//	});
 	$('.btn-setting').click(function(e){
 		e.preventDefault();
 		$('#myModal').modal('show');

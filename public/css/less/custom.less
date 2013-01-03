@@ -1,5 +1,150 @@
 
+//**** MIXINS ******
+
+
+.transparent_class() {
+/* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+
+/* IE 5-7 */
+  filter: alpha(opacity=50);
+
+/* Netscape */
+  -moz-opacity: 0.5;
+
+/* Safari 1.x */
+  -khtml-opacity: 0.5;
+
+/* Good browsers */
+  opacity: 0.5;
+}
+
+
+
+.left-nav-border {
+  padding-left: 5px;
+  border-left: 5px solid #058DC7;
+}
+
+
+
+//***** End MIXINS *****
+
+
+
+
+
+
+body {
+  background: #F9F9F9;
+}
+
+
+#main_container {
+  min-width: 1200px;
+}
 
 .main-menu-span {
-  margin-top: -40px;
+  margin-top: -20px;
+  min-width: 300px;
+
+
+
+
+
+  .box {
+    margin: 0;
+  }
+
+  .box-header {
+
+    padding-left: 5px;
+
+
+    .btn-header-minimize {
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+
+      padding-left: 1px;
+      border-left: 5px solid #058DC7;
+
+      background: rgba(135, 206, 235, 0.2);
+      -webkit-transition: background 200ms ease-in;
+      -moz-transition: background 200ms ease-in;
+      -ms-transition: background 200ms ease-in;
+      -o-transition: background 200ms ease-in;
+      transition: background 200ms ease-in;
+    }
+
+  }
+
+  .box-content {
+
+    ul {
+      li {
+        list-style-type: none;        
+        //padding: 5px 10px;
+
+        &:hover {
+          cursor: pointer;
+          background: rgba(135, 206, 235, 0.2);
+          -webkit-transition: background 200ms ease-in;
+          -moz-transition: background 200ms ease-in;
+          -ms-transition: background 200ms ease-in;
+          -o-transition: background 200ms ease-in;
+          transition: background 200ms ease-in;
+
+          a {
+            text-decoration: none;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+#content {
+  -webkit-box-shadow: -3px -1px 2px rgba(0,0,0,0.95);
+  -moz-box-shadow: -3px -1px 2px rgba(0,0,0,0.95);
+  box-shadow: -3px -1px 2px rgba(0,0,0,0.95);
+  background: #F9F9F9;
+  filter: none;
+  padding: 25px 0px 25px 40px;
+  margin: 0;
+  margin-top: -20px;
+  position: relative;
+  z-index: 1;
+  min-height: 100%;
+
+
+}
+
+
+
+
+
+
+#main_container {
+
+  &.container-fluid {
+    padding-left: 0;
+  }
+
+
+
+  div.row-fluid:nth-child(1) {
+    background: #F9F9F9;
+  }
+
 }
