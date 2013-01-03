@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 
     $boxes.not(':first').hide();
-    console.log($boxes.find(':first'));
+    $boxes.siblings('.box-header:first').addClass('left-nav-border');
 
 
 
